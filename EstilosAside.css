@@ -1,0 +1,28 @@
+@media only screen and (min-width: 200px) {
+
+#Aside {
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    width: 200px;
+    height: 1000px;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    border: none;
+}
+
+#Ofertas, #Masculinos, #Femininos {
+    position: fixed;
+    z-index: 1004;
+    transition: transform 0.2s ease;
+    right: 20px;
+}
+
+#Ofertas:hover, #Masculinos:hover, #Femininos:hover {
+    transform: scale(1.1);
+}
+
+#Ofertas { top: -15px; }
+#Masculinos { top: 40px; }
+#Femininos { top: 95px; }
+}
