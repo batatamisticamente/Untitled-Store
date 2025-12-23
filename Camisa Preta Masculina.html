@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa Preta Masculina</title>
+    <link rel="stylesheet" href="css/EstilosTelaInteira.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+    </style>
+</head>
+<body>
+    <div class="MenuTemplate">
+        <iframe id="MenuIframe" src="Menu.html" frameBorder="0"></iframe>
+      </div>
+      <div class="MenuTemplate">
+        <iframe id="MenuIframeFixed" src="MenuFixed.html" frameBorder="0"></iframe>
+      </div>
+    <div id="title" class="agdasima-regular">
+        <h1 style="text-align: center; font-size: 50px; margin: 15px; color: black;">Camisa Preta Masculina</h1>
+    </div>
+    <div id="blank" class="agdasima-regular"></div>
+    <div id="Preco" class="kanit-extralight">
+        <h1 style="text-align: center; font-size: 40px; margin: 5px; color: black;">Por: R$ 54,00</h1>
+    </div>
+    <div id="descripition">
+        <h1 style="font-size: 20px; margin: 10px; color: black;">
+            Camisa de algodão puro, macia e confortável. Gola alta elegante, ideal para dias frios. Mangas longas com punhos ajustados e corte reto, versátil para looks formais e casuais.
+        </h1>
+    </div>
+    <img id="buy" src="Comprar.png">
+    <img onclick="Comprar(cartitens)" id="cart" src="Adicionar ao Carrinho.png">
+    <div class="zoom-container">
+        <div class="zoom-image" id="image" style="background-image: url('shirt teste.png');"></div>
+    </div>
+
+    <script>
+        const zoomImage = document.getElementById('image');
+        document.querySelector('.zoom-container').addEventListener('mousemove', function (e) {
+            const rect = this.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            zoomImage.style.backgroundPosition = `${x}% ${y}%`;
+        });
+
+        function escrita() {
+            let escriba = document.getElementById("pesquisar");
+            console.log(escriba.value);
+        }
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 120) {
+                document.getElementById('MenuIframeFixed').style.display = 'block'
+                document.getElementById('MenuIframe').style.display = 'none'
+            }
+            else {
+                document.getElementById('MenuIframe').style.display = 'block'
+                document.getElementById('MenuIframeFixed').style.display = 'none'
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyshir</title>
+    <link rel="stylesheet" href="css/EstilosTelaInteira.css">
+    <link rel="icon" type="image/x-icon" href="Vyshir logo.png">
+</head>
+<body>
+    
+    <div class="MenuTemplate">
+        <iframe id="MenuIframe" src="Menu.html" frameBorder="0"></iframe>
+      </div>
+      <div class="MenuTemplate">
+        <iframe id="MenuIframeFixed" src="MenuFixed.html" frameBorder="0"></iframe>
+      </div>
+      <img id="Banner" src="Banner Exemplo.jpg"></img>
+      <div style="margin-left: 12.5%" class="InicialOferta"><img class="InicialOfertaImage" src="Camisa EMoji.png"></img><h1 class="InicialOfertaText">Descontos<h1></h1></div>
+      <div class="InicialOferta"><img class="InicialOfertaImage" src="Porcentagem Icon.png"></img><h1 class="InicialOfertaText">Fique de olho nas ofertas quase acabando<h1></div>
+      <div class="InicialOferta"><img class="InicialOfertaImage" src="Camisa EMoji.png"></img><h1 class="InicialOfertaText">Confira as camisas mais custo beneficio<h1></div>
+      <div class="InicialOferta"><img class="InicialOfertaImage" src="Camisa EMoji.png"></img><h1 class="InicialOfertaText">Moletons para o inverno<h1></div>
+      <div>
+        <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align: left; margin-left: 7%;">ofertas</h1>
+      <div style="margin-left: 3.25%;" class="Destaques"><img class="DestaquesImage" src="Camisa Branca Destaques.jpg"></img><div class="DestaquesPadding">Camisa Branca Masculina Manga Curta<h1 class="Desconto">R$ 15,50</h1><h1 class="Preço">R$ 10,49</h1></div></div>
+      <div class="Destaques"><img class="DestaquesImage" src="Camisa Preta Feminina Destaques.jpg"></img><div class="DestaquesPadding">Camisa Preta Feminina Manga Curta<h1 class="Desconto">R$ 15,50</h1><h1 class="Preço">R$ 10,49</h1></div></div>
+      <div class="Destaques"><img class="DestaquesImage" src="Camisa Branca Destaques.jpg"></img><div class="DestaquesPadding">Bone Preto Aberto Em Cima<h1 class="Desconto">R$ 15,50</h1><h1 class="Preço">R$ 10,49</h1></div></div>
+      <div class="Destaques"><img class="DestaquesImage" src="Camisa Branca Destaques.jpg"></img><div class="DestaquesPadding">Bone Preto Aberto Em Cima<h1 class="Desconto">R$ 15,50</h1><h1 class="Preço">R$ 10,49</h1></div></div>
+      </div>
+    <div>
+        <img class="tipos" src=""></img>
+    </div>
+    <div id="BackgroundP"></div>
+    <script>
+        function teste() {
+            alert("funcionando");
+        }
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 120) {
+                document.getElementById('MenuIframeFixed').style.display = 'block'
+                document.getElementById('MenuIframe').style.display = 'none'
+            }
+            else {
+                document.getElementById('MenuIframe').style.display = 'block'
+                document.getElementById('MenuIframeFixed').style.display = 'none'
+            }
+        })
+window.onload = (
+    setTimeout(Banner1, 10000)
+    )
+function Banner1() {
+        document.getElementById("Banner").src = 'Banner Exemplo3.jpg'
+        setTimeout(Banner2, 15000);
+}
+
+    function Banner2() {
+        document.getElementById("Banner").src = 'Banner Exemplo2.jpg'
+        setTimeout(Banner3, 10000);
+    }
+
+    function Banner3() {
+        document.getElementById("Banner").src = 'Banner Exemplo.jpg'
+        setTimeout(Banner1, 10000);
+    }
+
+    </script>
+</body>
+</html>

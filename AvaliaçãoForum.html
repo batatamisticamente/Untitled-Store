@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisa Branca Masculina</title>
+    <link rel="stylesheet" href="css/EstilosTelaInteira.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
+</head>
+<body style="background-color: white; overflow-x: hidden;">
+    <h1 style="display: none;" id="Tamanho"></h1>
+    <h1 style="display: none;" id="Conforto"></h1>
+    <h1 style="display: none;" id="Qualidade"></h1>
+    <h1 style="display: none;" id="CustoBeneficio"></h1>
+      <div style="position: relative; right: -15vh; align-items: center;">
+        <div style="width: 10vh; height: 15vh;"></div>
+        <div style="position: fixed; background-color: none; width: 0.1vh; height: 1000vh; right: 62.7vh; z-index: 10000;"></div>
+      <h1 style="position: fixed; right: 53.5vh; top: 0vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 100; font-weight: 300;">Avaliação</h1>
+      <div style="width: 120vh; height: 11vh; top: 0vh; right: 5vh; position: fixed; border-bottom: solid black 0.0vh; background-color: white; z-index: 99;"></div>
+      <img id="Star1" class="StarRate" src="Empty Star.png" onclick="StarClick(1)"></img>
+      <img id="Star2" class="StarRate" src="Empty Star.png" onclick="StarClick(2)"></img>
+      <img id="Star3" class="StarRate" src="Empty Star.png" onclick="StarClick(3)"></img>
+      <img id="Star4" class="StarRate" src="Empty Star.png" onclick="StarClick(4)"></img>
+      <img id="Star5" class="StarRate" src="Empty Star.png" onclick="StarClick(5)"></img>
+      <h1 id="storage" style="display: none;"></h1>
+      <button style="display: none;" id="ButtonClear" onclick="Limpar()">Limpar</button>
+      <h1 style="font-size: 2.5vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; right: -35vh; position: relative; font-weight: 500">Escreva um titulo para sua avaliação</h1>
+      <textarea id="Titletextarea" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 2.25vh; width: 75vh; right: -13.5vh; position: relative; border: solid rgb(188, 188, 188) 0.1vh;"></textarea>
+      <h1 style="font-size: 2.5vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; right: -35vh; position: relative; font-weight: 500">Escreva o conteudo da avaliação</h1>
+      <textarea id="Conteudotextarea" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 2.25vh; height: 10.5vh; width: 75vh; right: -13.5vh; position: relative; border: solid rgb"></textarea>
+      </div>
+      <button style="right: -107vh; position: relative;" onclick="saveData()">Enviar</button>
+      <div style="height: 100vh;"></div>
+      <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 300; top: -100vh; right: -50vh; position: relative;">Avaliar Atributos</h1>
+      <h1 style="font-size: 4vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500; top: -100vh; right: -59.5vh; position: relative;">Tamanho</h1>
+      <div style="top: -100vh;" class="AtributoContainer">
+        <div onclick="AtributoDefiner('1', 'Tamanho')" id="Tamanho1" style="margin-left: 39vh;" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('2', 'Tamanho')" id="Tamanho2" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('3', 'Tamanho')" id="Tamanho3" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('4', 'Tamanho')" id="Tamanho4" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('5', 'Tamanho')" id="Tamanho5" class="AtributosBarraAvaliar"></div>
+        <div class="AtributoTextContainer">
+        <h1 class="AtributoText">Justo</h1>
+        <h1 class="AtributoText" style="margin-left: 17vh;">Na medida</h1>
+        <h1 class="AtributoText" style="margin-left: 17vh;">Largo</h1>
+        </div>
+      </div>
+      <h1 style="font-size: 4vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500; top: -100vh; right: -59.5vh; position: relative;">Conforto</h1>
+      <div style="top: -100vh;" class="AtributoContainer">
+        <div onclick="AtributoDefiner('1', 'Conforto')" id="Conforto1" style="margin-left: 39vh;" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('2', 'Conforto')" id="Conforto2" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('3', 'Conforto')" id="Conforto3" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('4', 'Conforto')" id="Conforto4" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('5', 'Conforto')" id="Conforto5" class="AtributosBarraAvaliar"></div>
+        <div class="AtributoTextContainer">
+        <h1 class="AtributoText">Desconfortavel</h1>
+        <h1 class="AtributoText" style="margin-left: 7vh;">Confortavel</h1>
+        <h1 class="AtributoText" style="margin-left: 6vh;">Muito confortavel</h1>
+        </div>
+      </div>
+      <h1 style="font-size: 4vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500; top: -100vh; right: -58.5vh; position: relative;">Qualidade</h1>
+      <div style="top: -100vh;" class="AtributoContainer">
+        <div onclick="AtributoDefiner('1', 'Qualidade')" id="Qualidade1" style="margin-left: 39vh;" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('2', 'Qualidade')" id="Qualidade2" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('3', 'Qualidade')" id="Qualidade3" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('4', 'Qualidade')" id="Qualidade4" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('5', 'Qualidade')" id="Qualidade5" class="AtributosBarraAvaliar"></div>
+        <div class="AtributoTextContainer">
+        <h1 class="AtributoText">Ruim</h1>
+        <h1 class="AtributoText" style="margin-left: 20.5vh;">Boa</h1>
+        <h1 class="AtributoText" style="margin-left: 20vh;">Otima</h1>
+        </div>
+      </div>
+      <h1 style="font-size: 4vh; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500; top: -100vh; right: -54.5vh; position: relative;">Custo Beneficio</h1>
+      <div style="top: -100vh;" class="AtributoContainer">
+        <div onclick="AtributoDefiner('1', 'CustoBeneficio')" id="CustoBeneficio1" style="margin-left: 39vh;" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('2', 'CustoBeneficio')" id="CustoBeneficio2" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('3', 'CustoBeneficio')" id="CustoBeneficio3" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('4', 'CustoBeneficio')" id="CustoBeneficio4" class="AtributosBarraAvaliar"></div>
+        <div onclick="AtributoDefiner('5', 'CustoBeneficio')" id="CustoBeneficio5" class="AtributosBarraAvaliar"></div>
+        <div class="AtributoTextContainer">
+        <h1 class="AtributoText">Ruim</h1>
+        <h1 class="AtributoText" style="margin-left: 20vh;">Bom</h1>
+        <h1 class="AtributoText" style="margin-left: 19vh;">Otimo</h1>
+        </div>
+      </div>
+      <div class="AtributosBarraAvaliar"></div>
+    <script>
+        function StarClick(StarCount) {
+            var Stars = 5;
+                document.getElementById('storage').innerHTML = 0;
+                for (; Stars > 0; Stars--) {
+                document.getElementById('Star' + Stars).src = "Empty Star.png"
+            }
+            
+            var Stars = StarCount;
+            document.getElementById('storage').innerHTML = Stars;
+            for (; Stars > 0; Stars--) {
+                document.getElementById('Star' + Stars).src = "Star Icon.png"
+            }
+        }
+
+                function AtributoDefiner(Count, Atributo) {
+            var Max = 5;
+                document.getElementById('storage').innerHTML = 0;
+                document.getElementById(Atributo).innerHTML = Count;
+                for (; Max > 0; Max--) {
+                document.getElementById(Atributo + Max).style.backgroundColor = "gray";
+            }
+            
+            var AtCount = Count;
+            document.getElementById('storage').innerHTML = AtCount;
+            for (; AtCount > 0; AtCount--) {
+                document.getElementById(Atributo + AtCount).style.backgroundColor = "Black";
+            }
+        }
+
+        function escrita() {
+            let escriba = document.getElementById("pesquisar");
+            console.log(escriba.value);
+        }
+    </script>
+<script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, query, orderBy, getCountFromServer } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyCzFNhFv26t9bx6AgU4caj87DYywewRCZg",
+        authDomain: "unamedstoredatabase.firebaseapp.com",
+        projectId: "unamedstoredatabase",
+        storageBucket: "unamedstoredatabase.firebasestorage.app",
+        messagingSenderId: "432164321531",
+        appId: "1:432164321531:web:c2602776369e734709185e"
+
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+window.saveData = async function () {
+    const Title = document.getElementById("Titletextarea").value.trim();
+    const texto = document.getElementById("Conteudotextarea").value.trim();
+    const estrelas = document.getElementById('storage').innerHTML;
+    const Size = document.getElementById('Tamanho').innerHTML;
+    const Confort  = document.getElementById('Conforto').innerHTML;
+    const Quality = document.getElementById('Qualidade').innerHTML;
+    const Benefit = document.getElementById('CustoBeneficio').innerHTML;
+    if (!Title || !texto ) {
+        return alert("Preencha todos os campos!");
+    }
+    try {
+        await addDoc(collection(db, "dados"), {
+            titulo: Title,
+            text: texto,
+            timestamp: new Date(),
+            estrelas: estrelas,
+            size: Size,
+            confort: Confort,
+            quality: Quality,
+            benefit: Benefit,
+        });
+        alert("Created Post!");
+        window.parent.location.href = "Camisa Branca Masculina.html";
+    } catch (e) {
+        console.error("Erro ao salvar:", e);
+        alert("Erro ao salvar os dados.");
+    }
+};
+
+        window.getData = async function() {
+            const q = query(collection(db, "dados"), orderBy("timestamp", "desc"));
+            const querySnapshot = await getDocs(q);
+            const dataList = document.getElementById("dataList");
+            dataList.innerHTML = "";
+
+            let container = document.getElementById("container");
+            container.innerHTML = "";
+
+            querySnapshot.forEach((doc) => {
+
+            });
+        };
+</script>
+</body>
+</html>

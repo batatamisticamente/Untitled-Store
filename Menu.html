@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/EstilosTelaInteira.css">
+    <style>
+        body {
+    overflow: hidden;
+}
+        </style>
+</head>
+<body>
+    <div id="MainMenu">
+    <img id="Icon" onclick="MainPage()" src="Vyshir text Logo.png">
+        <form id="SearchBarForm">
+            <div id="SearchContainer"></div>
+            <input onkeydown="escrita()" id="SearchBar" type="text" placeholder="Pesquisar..."><img id="SearchIcon" src="Search Icon.jpg"></img></input>
+        </form>
+        <div id="IconsContainer">
+    <div class="IconsDiv" ><img src="Account Icon.jpg" class="IconsImg"></div>
+    <div class="IconsDiv" ><img style="width: 53px; height: 53px; top: 1px;" src="HandBagIcon.png" class="IconsImg"></div>
+    <div class="IconsDiv" ><img src="HeartIcon.png" class="IconsImg"></img></div>
+    </div>
+    </div>
+    <div id="Menu2">
+    <div class="Categorias"><h1>Feminino</h1></div>
+    <div class="Categorias"><h1>Masculino</h1></div>
+    <div class="Categorias"><h1>Infantil</h1></div>
+    <div class="Categorias"><h1>Moleton</h1></div>
+    <div class="Categorias"><h1>Esporte</h1></div>
+    </div>
+    <div></div>
+    <script>
+        function escrita() {
+            let escriba = document.getElementById("SearchBar");
+            console.log(escriba.value);
+        }
+        function MainPage() {
+            parent.window.location.href = "Vyshir.html"
+        }
+    </script>
+</body>
+</html>
